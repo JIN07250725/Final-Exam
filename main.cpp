@@ -52,17 +52,20 @@ int main() {
     
     if (goalMiles <= 0) {
         cout << "No miles were tracked this week." << endl;
-    } else {
+    }
+    else {
         int totalMiles = calcTotal();
         
         cout << "You rode " << totalMiles << " miles this week." << endl;
         
         if (totalMiles == goalMiles) {
             cout << "Good job! You met your goal!" << endl;
-        } else if (totalMiles > goalMiles) {
+        }
+        else if (totalMiles > goalMiles) {
             int over = totalMiles - goalMiles;
             cout << "Great job! You exceeded your goal by " << over << " miles!" << endl;
-        } else {
+        }
+        else {
             int under = goalMiles - totalMiles;
             cout << "Uh oh! You missed your goal by " << under << " miles!" << endl;
         }
@@ -105,7 +108,8 @@ int calcTotal() {
             
             if (dailyMiles < 0) {
                 cout << "Miles must be 0 or greater!" << endl;
-            } else {
+            } 
+            else {
                 break;  // Valid input, exit inner loop
             }
         }
@@ -206,8 +210,7 @@ FUNCTION calcTotal(): INT
     DECLARE dailyMiles: INT
     
     FOR day FROM 1 TO 7
-        DO
-            // Use conditional statements for day names without arrays
+        DO            
             SWITCH (day)
                 CASE 1: PRINT "How many miles did you ride on Sunday? "
                 CASE 2: PRINT "How many miles did you ride on Monday? "
